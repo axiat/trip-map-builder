@@ -17,7 +17,8 @@ the original plan.
 
 ## 启动模式
 
-开始规划前，先确定本次模式。用户已指定模式时直接采用；未指定时只问
+开始完整旅行规划或行程细化前，先确定本次模式。单独查询一家餐厅或地点时
+直接处理该请求。用户已指定模式时直接采用；未指定时只问
 一次：**“这次选自动走完，还是交互式逐步确认？”** 等待用户选择后启动。
 模式只决定过程中的确认频率，不改变事实核查、文件归档和交付物。
 
@@ -75,8 +76,9 @@ Read `references/trip-planning.md` for the full methodology.
 
 Core sequence:
 
-1. **Extract hard constraints** — dates, flight times, terminals, hotel
-   location; cross-check against 当次 README 里已拍板的方向
+1. **Extract hard constraints** — dates and any confirmed flights, terminals,
+   or hotels; treat unbooked transport and lodging as options, not confirmed
+   constraints. Cross-check against 当次 README 里已拍板的方向
 2. **Group user's wishlist** — city-easy / needs-reservation / far-suburbs / pass-through
 3. **Cut high-risk items first** — too far, holiday-crowded, weather-dependent. Say what was cut and why.
 
